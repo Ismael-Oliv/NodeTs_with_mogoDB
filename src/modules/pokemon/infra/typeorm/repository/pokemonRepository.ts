@@ -31,4 +31,10 @@ export class PokemonRepository implements IPokemonRepository {
     });
     return pokemon;
   }
+
+  public async findOneById(id: string): Promise<Pokemon | undefined> {
+    const repository = getMongoRepository(Pokemon);
+    const pokemon = repository.findOne(id);
+    return pokemon;
+  }
 }

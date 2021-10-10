@@ -55,6 +55,7 @@ export class YupValidationProvider implements IValidationProvider {
             .moreThan(1, 'Generation should be more than 1')
             .lessThan(6, 'Generation should be less than 6')
             .required('Generation is required'),
+          image: yup.string().required('Image is required'),
         })
         .noUnknown(true)
         .strict();

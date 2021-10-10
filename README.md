@@ -2,11 +2,9 @@
 
 Aplicação de cadastro de pokemons utilizando mongodb como base de dados e typescript com linguágem.
 
-
-
 ### Configurações
 
-Será necessário configurar a conexão com o banco de dados através do arquivo *ormconfig.json*, você pode verificar o arquivo *ormconfig.example.json* para entender como deve ser configurado.
+Será necessário configurar a conexão com o banco de dados através do arquivo _ormconfig.json_, você pode verificar o arquivo _ormconfig.example.json_ para entender como deve ser configurado.
 
 ### Execução
 
@@ -18,8 +16,6 @@ Será necessário configurar a conexão com o banco de dados através do arquivo
 
 `yarn dev` ou `npm run dev`
 
-
-
 ### Endpoints
 
 - ##### Criar pokemon:
@@ -30,39 +26,39 @@ Será necessário configurar a conexão com o banco de dados através do arquivo
 
   local do envio: `body`
 
-  tipo de dado: 
+  tipo de dado:
 
-  ​	`{`
+   `{`
 
-  ​		`pokedex_index: number;`
+   `pokedex_index: number;`
 
-  ​		`name: string`
+   `name: string`
 
-  ​		`hp: number;`
+   `hp: number;`
 
-  ​		`attack: number;`
+   `attack: number;`
 
-  ​		`defense: number;`
+   `defense: number;`
 
-  ​		`special_attack: number;`
+   `special_attack: number;`
 
-  ​		`special_defense: number;`
+   `special_defense: number;`
 
-  ​		`speed: number;`
+   `speed: number;`
 
-  ​		`generation: number;`
+   `generation: number;`
 
-  ​		`image: string;` <!--Url da imagem-->
+   `image: string;` <!--Url da imagem-->
 
-  ​		`}`
+   `}`
 
   retorno: mesmo tipo do envio, mas acrecentando a propriedade `id`
 
-----------------------------------------------------------------------------------------------------------------------
+---
 
 - ##### Listar pokemon específico:
 
-  rota:`/pokemon/id:`
+  rota:`/pokemon/listOne/id:`
 
   metodo: `GET`
 
@@ -70,29 +66,28 @@ Será necessário configurar a conexão com o banco de dados através do arquivo
 
   retorno:
 
-  ​	`{`
+   `{`
 
-  ​		`id: string;`
+   `id: string;`
 
-  ​		`pokedex_index: number;`
+   `pokedex_index: number;`
 
-  ​		`name: string`
+   `name: string`
 
-  ​		`hp: number;`
+   `hp: number;`
 
-  ​		`attack: number;`
+   `attack: number;`
 
-  ​		`defense: number;`
+   `defense: number;`
 
-  ​		`special_attack: number;`
+   `special_attack: number;`
 
-  ​		`special_defense: number;`
+   `special_defense: number;`
 
-  ​		`speed: number;`
+   `speed: number;`
 
-  ​		`generation: number;`
+   `generation: number;`
 
-  ​		`image: string;`
+   `image: string;`
 
-  ​		`}`
-
+   `}`
