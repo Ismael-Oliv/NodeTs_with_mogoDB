@@ -4,12 +4,6 @@ import { Type } from '../schemas/type';
 import { IType } from '../../../dto';
 
 export class TypeRepository implements ITypeRepository {
-  // private ormRepository: MongoRepository<Type>;
-
-  constructor() {
-    // this.ormRepository = getMongoRepository(Type);
-  }
-
   public async create({ type }: IType): Promise<Type> {
     const repository = getMongoRepository(Type);
 

@@ -4,12 +4,6 @@ import { Pokemon } from '../schemas/pokemon';
 import { IPokemon } from '../../../dto';
 
 export class PokemonRepository implements IPokemonRepository {
-  // private ormRespository: MongoRepository<Pokemon>;
-
-  constructor() {
-    // this.ormRespository = getMongoRepository(Pokemon);
-  }
-
   public async create(pokamonData: IPokemon): Promise<Pokemon> {
     const repository = getMongoRepository(Pokemon);
     const pokemon = repository.create(pokamonData);
