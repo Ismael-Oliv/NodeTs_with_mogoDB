@@ -1,10 +1,10 @@
 # Node TS with MongoDB
 
-Aplicação de cadastro de pokemons utilizando mongodb como base de dados e typescript com linguágem.
+Aplicação de cadastro de pokemons utilizando mongodb como base de dados, typescript com linguágem e typegoose como orm.
 
 ### Configurações
 
-Será necessário configurar a conexão com o banco de dados através do arquivo _ormconfig.json_, você pode verificar o arquivo _ormconfig.example.json_ para entender como deve ser configurado.
+Será necessário configurar a conexão com o banco de dados através do arquivo _.env_, você pode verificar o arquivo _.env.example_ para entender como deve ser configurado.
 
 ### Execução
 
@@ -30,6 +30,8 @@ Será necessário configurar a conexão com o banco de dados através do arquivo
 
    `{`
 
+  `_id: string`
+
    `pokedex_index: number;`
 
    `name: string`
@@ -51,7 +53,7 @@ Será necessário configurar a conexão com o banco de dados através do arquivo
    `image: string;` <!--Url da imagem-->
 
    `}`
-
+  
   retorno: mesmo tipo do envio, mas acrecentando a propriedade `id`
 
 ---
@@ -62,7 +64,7 @@ Será necessário configurar a conexão com o banco de dados através do arquivo
 
   metodo: `GET`
 
-  local do envio: `Params`
+  local do envio: `Query`
 
   retorno:
 

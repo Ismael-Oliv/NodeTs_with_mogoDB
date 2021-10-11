@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import { CreatePokemonService } from '../../../services/CreatePokemonService';
-import { PokemonRepository } from '../../typeorm/repository/pokemonRepository';
+// import { PokemonRepository } from '../../typeorm/repository/pokemonRepository';
+import { PokemonRepository } from '../../typegoose/repository/pokemonRepository';
 import { YupValidationProvider } from '../../providers/Yup/implementations/YupValidationProvider';
 
 const pokemonRepository = new PokemonRepository();

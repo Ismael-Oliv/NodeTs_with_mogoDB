@@ -1,7 +1,7 @@
-import { Type } from '../infra/typeorm/schemas/type';
+import { Type } from '../infra/typegoose/schemas/type';
 import { IType } from '../dto';
 
 export interface ITypeRepository {
   create(type: IType): Promise<Type>;
-  findByDescription(description: string): Promise<Type | undefined>;
+  findByType(type: string): Promise<Type | undefined>;
 }

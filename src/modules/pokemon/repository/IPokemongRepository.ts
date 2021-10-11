@@ -1,4 +1,4 @@
-import { Pokemon } from '../infra/typeorm/schemas/pokemon';
+import { Pokemon } from '../infra/typegoose/schemas/pokemon';
 import { IPokemon } from '../dto';
 
 export interface IPokemonRepository {

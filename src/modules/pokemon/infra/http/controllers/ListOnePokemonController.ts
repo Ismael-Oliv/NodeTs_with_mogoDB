@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { PokemonRepository } from '../../typeorm/repository/pokemonRepository';
+import { PokemonRepository } from '../../typegoose/repository/pokemonRepository';
 import { ListOnePokemonService } from '../../../services/ListOnePokemonService';
 
 const pokemonRepository = new PokemonRepository();
@@ -11,9 +11,9 @@ export class ListOnePokemonController {
     request: Request,
     response: Response
   ): Promise<Response> {
-    const { id } = request.params;
+    let { id } = request.query;
 
-    const newType = await listOnePokemonService.execute(id);
+    const newType = await listOnePokemonService.execute(id as string);
 
     return response.json(newType);
   }
