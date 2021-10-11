@@ -17,14 +17,14 @@ export class Pokemon_types {
   @Column()
   pokemon_id: ObjectID;
 
-  @OneToOne(() => Pokemon)
+  @OneToOne(() => Pokemon, { lazy: true })
   @JoinColumn()
   pokemon: Pokemon;
 
   @Column()
   type_id: ObjectID;
 
-  @OneToOne(() => Type)
+  @OneToOne(() => Type, { lazy: true })
   @JoinColumn()
   type: Type;
 }
