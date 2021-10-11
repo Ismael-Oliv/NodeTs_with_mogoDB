@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { TypeRepository } from '../../typeorm/repository/typeRepository';
+import { TypeRepository } from '../../typegoose/repository/typeRepository';
 import { CreateTypeService } from '../../../services/CreateTypeService';
 import { YupValidationProvider } from '../../providers/Yup/implementations/YupValidationProvider';
 

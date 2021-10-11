@@ -1,7 +1,8 @@
 import 'reflect-metadata';
+import 'reflect';
 
 import express from 'express';
-import '../typeorm';
+import '../typegoose';
 import 'express-async-errors';
 
 import { HandlingError } from './middleware/handlingErros';
