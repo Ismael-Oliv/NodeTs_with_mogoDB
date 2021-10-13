@@ -1,14 +1,7 @@
 import { Request, Response } from 'express';
-import { TypeRepository } from '../../typegoose/repository/typeRepository';
-import { CreateTypeService } from '../../../services/CreateTypeService';
-import { YupValidationProvider } from '../../providers/Yup/implementations/YupValidationProvider';
+import { container } from 'tsyringe';
 
-const typeRepository = new TypeRepository();
-const yupValidationProvider = new YupValidationProvider();
-const createTypeService = new CreateTypeService(
-  typeRepository,
-  yupValidationProvider
-);
+import { CreateTypeService } from '../../../services/CreateTypeService';
 
 export class CreateTypeController {
   public async execute(
@@ -16,6 +9,8 @@ export class CreateTypeController {
     response: Response
   ): Promise<Response> {
     const { type } = request.body;
+
+    const createTypeService = container.resolve(CreateTypeService);
 
     const newType = await createTypeService.execute({ type });
 
