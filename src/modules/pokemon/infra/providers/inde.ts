@@ -4,6 +4,6 @@ import { IValidationProvider } from './Yup/models/IValidationProvider';
 import { YupValidationProvider } from './Yup/implementations/YupValidationProvider';
 
 container.registerSingleton<IValidationProvider>(
-  'YupValidationProvider',
+  'ValidationProvider',
   YupValidationProvider
 );
