@@ -1,11 +1,15 @@
+import { inject, injectable } from 'tsyringe';
 import { IPokemonRepository } from '../repository/IPokemongRepository';
 import { IPokemon } from '../dto';
 import { AppError } from '../../shared/Error/AppError';
 import { IValidationProvider } from '../infra/providers/Yup/models/IValidationProvider';
 
+@injectable()
 export class CreatePokemonService {
   constructor(
+    @inject('PokemonRepository')
     private pokemonRepository: IPokemonRepository,
+    @inject('ValidationProvider')
     private validationProvider: IValidationProvider
   ) {}
   public async execute(pokemonData: IPokemon) {

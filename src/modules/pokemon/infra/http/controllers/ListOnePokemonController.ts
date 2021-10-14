@@ -1,10 +1,6 @@
 import { Request, Response } from 'express';
-import { PokemonRepository } from '../../typegoose/repository/pokemonRepository';
+import { container } from 'tsyringe';
 import { ListOnePokemonService } from '../../../services/ListOnePokemonService';
-
-const pokemonRepository = new PokemonRepository();
-
-const listOnePokemonService = new ListOnePokemonService(pokemonRepository);
 
 export class ListOnePokemonController {
   public async execute(
@@ -12,6 +8,8 @@ export class ListOnePokemonController {
     response: Response
   ): Promise<Response> {
     let { id } = request.query;
+
+    const listOnePokemonService = container.resolve(ListOnePokemonService);
 
     const newType = await listOnePokemonService.execute(id as string);
 

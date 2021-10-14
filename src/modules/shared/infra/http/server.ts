@@ -3,6 +3,7 @@ import 'reflect';
 
 import express from 'express';
 import '../typegoose';
+import '../../container';
 import 'express-async-errors';
 
 import { HandlingError } from './middleware/handlingErros';
